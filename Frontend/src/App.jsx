@@ -9,6 +9,8 @@ import CaptainSignup from './pages/CaptainSignup'
 import UserProtectWrapper from './pages/UserProtectWrapper'
 import CaptainHome from './pages/CaptainHome'
 import CaptainProtectWrapper from './pages/CaptainProtectWrapper'
+import Riding from './pages/Riding'
+import CaptainRiding from './pages/CaptainRiding'
 function App() {
   return (
     <div>
@@ -19,9 +21,11 @@ function App() {
         <Home/>
       </UserProtectWrapper>} />
       <Route path='/login' element={<UserLogin />} />
+      <Route path='/riding' element={<Riding />} />
 
       <Route path='/signup' element={<UserSignUp />} />
       <Route path='/captain-login' element={<Captainlogin />} />
+      <Route path='/captain-riding' element={<CaptainRiding />} />
       <Route path='/captain-signup' element={<CaptainSignup />} />
       <Route  path='/captain-home' element={
       <CaptainProtectWrapper>
