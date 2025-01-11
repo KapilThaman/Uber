@@ -1,9 +1,12 @@
 const http = require("http");
 const app = require("./app");
- const port = process.env.PORT || 3000;
+const { initializeSocket } = require("./socket"); // Import initializeSocket
+const port = process.env.PORT || 3030;
 
 const server = http.createServer(app);
 
-server.listen(port,()=>{
-    console.log("listening on the Port "+ port );
+initializeSocket(server); // Initialize Socket.IO
+
+server.listen(port, () => {
+  console.log("listening on the Port " + port);
 });
